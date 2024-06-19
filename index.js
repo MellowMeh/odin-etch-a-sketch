@@ -54,9 +54,19 @@ let generateGrid = () => {
     }
 }
 
+let changeColor = () => {
+    let coloredPixels = document.querySelectorAll('#row');
+    for (let coloredPixel of coloredPixels){
+        coloredPixel.addEventListener('mouseover', () => {
+            coloredPixel.style.backgroundColor = 'red';
+        })
+    }    
+}
+
 slideContainer.addEventListener('change', () => {
     getAmountOfPixels();
     getPixelSize();
     generateGrid();
+    changeColor();
     slider.addEventListener('mousedown', resetGrid)
 });
