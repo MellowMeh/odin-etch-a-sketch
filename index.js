@@ -11,3 +11,31 @@ let gridOverlaySelector = document.querySelector('#gridOverlaySelector');
 let colorSelector = document.querySelector('#colorSelector');
 let clearButton = document.querySelector('#clearButton');
 let footer = document.querySelector('#footer');
+
+let resolution;
+let amountOfPixels;
+let getAmountOfPixels = (sliderInput) => {
+    resolution = document.getElementById('slider').value;
+    amountOfPixels = resolution * resolution;
+    console.log(amountOfPixels);
+}
+
+let pixelSize;
+let getPixelSize = () => {
+    pixelSize = (100/resolution) + '%';
+    console.log(pixelSize)
+}
+
+
+slider.addEventListener('change', () => {
+    getAmountOfPixels();
+    getPixelSize();
+    for (i = 0; i < amountOfPixels; i++) {
+        let pixel = document.createElement('div');
+        pixel.style.border = 'solid';
+        pixel.style.borderWidth = '1px';
+        pixel.style.width = pixelSize;
+        pixel.style.height = pixelSize;
+        grid.appendChild(pixel);
+    }
+});
