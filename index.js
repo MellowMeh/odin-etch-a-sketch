@@ -33,7 +33,13 @@ let resetGrid = () => {
     grid.removeChild(pixelArt);
 }
 
+let pixelArt;
 let generateGrid = () => {
+    pixelArt = document.createElement('div');
+    pixelArt.style.display = 'flex';
+    pixelArt.style.flexWrap = 'wrap';
+    pixelArt.style.width = '60svh';
+    grid.appendChild(pixelArt);
     for (i = 0; i < amountOfPixels; i++) {
         let pixel = document.createElement('div');
         pixel.style.border = 'solid';

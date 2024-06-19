@@ -33,12 +33,6 @@ ul {
 }
 
 #grid {
-    border: solid;
-    background-color: #fdfdfd;
-    margin: 10px;
-}
-
-#pixelArt {
     display: flex;
     flex-wrap: wrap;
     border: solid;
