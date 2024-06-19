@@ -33,9 +33,7 @@ let resetGrid = () => {
     grid.removeChild(pixel);
 }
 
-slider.addEventListener('change', () => {
-    getAmountOfPixels();
-    getPixelSize();
+let generateGrid = () => {
     for (i = 0; i < amountOfPixels; i++) {
         let pixel = document.createElement('div');
         pixel.style.border = 'solid';
@@ -44,4 +42,10 @@ slider.addEventListener('change', () => {
         pixel.style.height = pixelSize;
         grid.appendChild(pixel);
     }
+}
+
+sliderContainer.addEventListener('change', () => {
+    getAmountOfPixels();
+    getPixelSize();
+    generateGrid();
 });
