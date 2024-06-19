@@ -33,6 +33,8 @@ ul {
 }
 
 #grid {
+    display: flex;
+    flex-wrap: wrap;
     border: solid;
     height: 60svh;
     width: 60svh;
