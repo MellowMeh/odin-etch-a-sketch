@@ -29,6 +29,9 @@ let getPixelSize = () => {
     console.log(pixelSize)
 }
 
+let resetGrid = () => {
+    grid.removeChild(pixel);
+}
 
 slider.addEventListener('change', () => {
     getAmountOfPixels();
