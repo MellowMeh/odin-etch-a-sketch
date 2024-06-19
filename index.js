@@ -35,6 +35,7 @@ let resetGrid = () => {
     resolutionSelector.removeChild(resolutionDisplay);
 }
 
+let pixel;
 let pixelArt;
 let generateGrid = () => {
     pixelArt = document.createElement('div');
@@ -43,7 +44,7 @@ let generateGrid = () => {
     pixelArt.style.width = '60svh';
     grid.appendChild(pixelArt);
     for (i = 0; i < amountOfPixels; i++) {
-        let pixel = document.createElement('div');
+        pixel = document.createElement('div');
         pixel.style.border = 'solid';
         pixel.style.borderWidth = '1px';
         pixel.style.width = pixelSize;
