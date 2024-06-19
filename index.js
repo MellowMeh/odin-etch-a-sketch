@@ -44,7 +44,7 @@ let generateGrid = () => {
     pixelArt.style.width = '60svh';
     grid.appendChild(pixelArt);
     for (i = 0; i < amountOfPixels; i++) {
-        pixel = document.createElement('div');
+        pixel = document.createElement('span');
         pixel.style.border = 'solid';
         pixel.style.borderWidth = '1px';
         pixel.style.width = pixelSize;
