@@ -13,10 +13,11 @@ let clearButton = document.querySelector('#clearButton');
 let footer = document.querySelector('#footer');
 
 let resolution;
+let resolutionDisplay;
 let amountOfPixels;
 let getAmountOfPixels = (sliderInput) => {
     resolution = document.getElementById('slider').value;
-    let resolutionDisplay = document.createElement('p');
+    resolutionDisplay = document.createElement('p');
         resolutionDisplay.textContent = resolution + ' x ' + resolution;
         resolutionSelector.appendChild(resolutionDisplay);
     amountOfPixels = resolution * resolution;
@@ -31,6 +32,7 @@ let getPixelSize = () => {
 
 let resetGrid = () => {
     grid.removeChild(pixelArt);
+    resolutionSelector.removeChild(resolutionDisplay);
 }
 
 let pixelArt;
