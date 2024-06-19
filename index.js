@@ -16,6 +16,9 @@ let resolution;
 let amountOfPixels;
 let getAmountOfPixels = (sliderInput) => {
     resolution = document.getElementById('slider').value;
+    let resolutionDisplay = document.createElement('p');
+        resolutionDisplay.textContent = resolution + ' x ' + resolution;
+        resolutionSelector.appendChild(resolutionDisplay);
     amountOfPixels = resolution * resolution;
     console.log(amountOfPixels);
 }
