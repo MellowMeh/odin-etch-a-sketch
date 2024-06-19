@@ -30,7 +30,7 @@ let getPixelSize = () => {
 }
 
 let resetGrid = () => {
-    grid.removeChild(pixel);
+    grid.removeChild(pixelArt);
 }
 
 let generateGrid = () => {
@@ -40,12 +40,13 @@ let generateGrid = () => {
         pixel.style.borderWidth = '1px';
         pixel.style.width = pixelSize;
         pixel.style.height = pixelSize;
-        grid.appendChild(pixel);
+        pixelArt.appendChild(pixel);
     }
 }
 
-sliderContainer.addEventListener('change', () => {
+slideContainer.addEventListener('change', () => {
     getAmountOfPixels();
     getPixelSize();
     generateGrid();
+    slider.addEventListener('mousedown', resetGrid)
 });
