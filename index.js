@@ -9,6 +9,7 @@ let slideContainer = document.querySelector('#slideContainer');
 let slider = document.querySelector('#slider');
 let gridOverlaySelector = document.querySelector('#gridOverlaySelector');
 let colorSelector = document.querySelector('#colorSelector');
+let colorMenu = document.querySelector('#colorMenu');
 let clearButton = document.querySelector('#clearButton');
 let footer = document.querySelector('#footer');
 
@@ -58,15 +59,24 @@ let changeColorOnHover = () => {
     let coloredPixels = document.querySelectorAll('#row');
     for (let coloredPixel of coloredPixels){
         coloredPixel.addEventListener('mouseenter', () => {
-            coloredPixel.style.backgroundColor = 'red';
+            coloredPixel.style.backgroundColor = colorChosen;
         });
     }    
+}
+
+let colorChosen = 'red';
+let trackColor = () => {
+    colorMenu.addEventListener('change', () => {
+        colorChosen = document.getElementById('colorMenu').value;
+        console.log(colorChosen);
+    })
 }
 
 slider.addEventListener('mouseup', () => {
     getAmountOfPixels();
     getPixelSize();
     generateGrid();
+    trackColor();
     changeColorOnHover();
     slider.addEventListener('mousedown', resetGrid)
 });
