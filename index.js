@@ -80,3 +80,12 @@ slider.addEventListener('mouseup', () => {
     changeColorOnHover();
     slider.addEventListener('mousedown', resetGrid)
 });
+
+clearButton.addEventListener('click', () => {
+    resetGrid();
+    getAmountOfPixels();
+    getPixelSize();
+    generateGrid();
+    trackColor();
+    changeColorOnHover();
+})
