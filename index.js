@@ -63,7 +63,7 @@ let changeColorOnHover = () => {
     }    
 }
 
-slideContainer.addEventListener('mouseup', () => {
+slider.addEventListener('mouseup', () => {
     getAmountOfPixels();
     getPixelSize();
     generateGrid();
