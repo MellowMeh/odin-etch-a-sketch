@@ -89,3 +89,10 @@ clearButton.addEventListener('click', () => {
     trackColor();
     changeColorOnHover();
 })
+
+getAmountOfPixels();
+getPixelSize();
+generateGrid();
+trackColor();
+changeColorOnHover();
+slider.addEventListener('mousedown', resetGrid)
