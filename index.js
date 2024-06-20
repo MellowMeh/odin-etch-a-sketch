@@ -95,6 +95,7 @@ slider.addEventListener('click', () => {
 
 clearButton.addEventListener('click', () => {
     resetGrid();
+    removePlaceHolder();
     getAmountOfPixels();
     getPixelSize();
     generateGrid();
