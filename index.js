@@ -35,6 +35,9 @@ let getPixelSize = () => {
 let resetGrid = () => {
     grid.removeChild(pixelArt);
     resolutionSelector.removeChild(resolutionDisplay);
+    placeHolder = document.createElement('p');
+        placeHolder.textContent = '........';
+        resolutionSelector.appendChild(placeHolder);
 }
 
 let pixel;
@@ -73,7 +76,14 @@ let trackColor = () => {
     })
 }
 
+
+let removePlaceHolder = () => {
+    if (placeHolder) {
+        resolutionSelector.removeChild(placeHolder);
+    }
+}
 slider.addEventListener('click', () => {
+    removePlaceHolder();
     getAmountOfPixels();
     getPixelSize();
     generateGrid();
