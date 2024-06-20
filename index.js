@@ -86,7 +86,13 @@ let removePlaceHolder = () => {
         resolutionSelector.removeChild(placeHolder);
     }
 }
+
+let resetCheckbox = () => {
+    document.getElementById("checkbox").checked = false;
+}
+
 slider.addEventListener('click', () => {
+    resetCheckbox();
     removePlaceHolder();
     getAmountOfPixels();
     getPixelSize();
@@ -98,6 +104,7 @@ slider.addEventListener('click', () => {
 });
 
 clearButton.addEventListener('click', () => {
+    resetCheckbox();
     resetGrid();
     removePlaceHolder();
     getAmountOfPixels();
