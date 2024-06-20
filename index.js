@@ -90,6 +90,7 @@ clearButton.addEventListener('click', () => {
     generateGrid();
     trackColor();
     changeColorOnHover();
+    toggleGrid();
 })
 
 let toggleGrid = () => {
