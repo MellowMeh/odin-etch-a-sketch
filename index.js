@@ -21,6 +21,8 @@ let getAmountOfPixels = (sliderInput) => {
     resolution = document.getElementById('slider').value;
     resolutionDisplay = document.createElement('p');
         resolutionDisplay.textContent = resolution + ' x ' + resolution;
+        resolutionDisplay.style.display = 'flex';
+        resolutionDisplay.style.justifyContent = 'center';
         resolutionSelector.appendChild(resolutionDisplay);
     amountOfPixels = resolution * resolution;
     console.log(amountOfPixels);
@@ -37,6 +39,8 @@ let resetGrid = () => {
     resolutionSelector.removeChild(resolutionDisplay);
     placeHolder = document.createElement('p');
         placeHolder.textContent = '........';
+        placeHolder.style.display = 'flex';
+        placeHolder.style.justifyContent = 'center';
         resolutionSelector.appendChild(placeHolder);
 }
 
