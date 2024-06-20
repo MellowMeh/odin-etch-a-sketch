@@ -8,6 +8,7 @@ let resolutionSelector = document.querySelector('#resolutionSelector');
 let slideContainer = document.querySelector('#slideContainer');
 let slider = document.querySelector('#slider');
 let gridOverlaySelector = document.querySelector('#gridOverlaySelector');
+let checkbox = document.querySelector('#checkbox');
 let colorSelector = document.querySelector('#colorSelector');
 let colorMenu = document.querySelector('#colorMenu');
 let clearButton = document.querySelector('#clearButton');
