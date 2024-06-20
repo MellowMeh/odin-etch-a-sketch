@@ -73,7 +73,7 @@ let trackColor = () => {
     })
 }
 
-slider.addEventListener('mouseup', () => {
+slider.addEventListener('click', () => {
     getAmountOfPixels();
     getPixelSize();
     generateGrid();
