@@ -79,6 +79,7 @@ slider.addEventListener('mouseup', () => {
     generateGrid();
     trackColor();
     changeColorOnHover();
+    toggleGrid();
     slider.addEventListener('mousedown', resetGrid)
 });
 
@@ -91,9 +92,23 @@ clearButton.addEventListener('click', () => {
     changeColorOnHover();
 })
 
+let toggleGrid = () => {
+    let coloredPixels = document.querySelectorAll('#row');
+    for (let coloredPixel of coloredPixels){
+        checkbox.addEventListener('mousedown', () => {
+            if (checkbox.checked == false) {
+                coloredPixel.style.border = 'none';
+            } else {
+                coloredPixel.style.border = 'solid 1px';
+            }
+        });
+    }    
+}
+
 getAmountOfPixels();
 getPixelSize();
 generateGrid();
 trackColor();
 changeColorOnHover();
+toggleGrid();
 slider.addEventListener('mousedown', resetGrid)
