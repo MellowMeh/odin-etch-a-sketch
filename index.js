@@ -58,11 +58,8 @@ let changeColorOnHover = () => {
     let coloredPixels = document.querySelectorAll('#row');
     for (let coloredPixel of coloredPixels){
         coloredPixel.addEventListener('mouseenter', () => {
-            coloredPixel.style.backgroundColor = 'lightGray';
-        coloredPixel.addEventListener('mouseleave', () => {
-            coloredPixel.style.backgroundColor = '#fdfdfd';
-        })
-        })
+            coloredPixel.style.backgroundColor = 'red';
+        });
     }    
 }
 
